@@ -13,7 +13,7 @@ const serviceAccount = require("./configs/bruz-6902d-firebase-adminsdk-sgrsh-9e0
 admin.initializeApp({
   credential: admin.credential.cert(serviceAccount),
 });
-
+ console.log(process.env.DB_PASS)
 const MongoClient = require("mongodb").MongoClient;
 const uri =
  `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASS}@cluster0.z2baq.mongodb.net/bruzdb?retryWrites=true&w=majority`;
